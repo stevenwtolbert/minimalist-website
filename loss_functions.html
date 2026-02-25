@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loss Functions - Steven W. Tolbert</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <p><a href="notes_ml.html">Back to ML Notes</a></p>
+    <h1>Loss Functions</h1>
+
+    <h2>Loss Functions for Regression</h2>
+    <p>Mean squared error (MSE) is often the first regression loss function encountered. Error is the difference between target \(y_{i}\) and prediction \(\hat{y}_{i}\):</p>
+    <p>$$error = y_{i}-\hat{y}_{i}$$</p>
+    <p>MSE squares this error, creating a quadratic surface for optimization:</p>
+    <p>$$MSE =\frac{1}{N}\sum_{i=0}^{N} (y_{i}-\hat{y}_{i})^2$$</p>
+    <p>Root Mean Squared Error (RMSE) is its square root:</p>
+    <p>$$RMSE =\sqrt{\frac{1}{N}\sum_{i=0}^{N} (y_{i}-\hat{y}_{i})}$$</p>
+    <p>For target variables with large spreads, Mean Squared Logarithmic Error (MSLE) is more suitable:</p>
+    <p>$$MSLE =\frac{1}{N}\sum_{i=0}^{N} (ln(y_{i})-ln(\hat{y}_{i}))^{2}$$</p>
+    <p>For robustness against outliers, Mean Absolute Error (MAE) is used:</p>
+    <p>$$MAE =\frac{1}{N}\sum_{i=0}^{N} |y_{i}-\hat{y}_{i}|$$</p>
+
+    <h2>Loss Functions for Classification</h2>
+    <p>Cross-entropy measures the distance between target and predicted probability distributions. Binary Cross Entropy (BCE) is defined as:</p>
+    <p>$$BCE = -\frac{1}{N}\sum_{i=0}^{N} y_{i}\log_{2}(\hat{y}_{i})+(1-y_{i})log_{2}(1-\hat{y_{i}}) $$</p>
+
+    <hr>
+    <p>2026 Steven W. Tolbert</p>
+</body>
+</html>
